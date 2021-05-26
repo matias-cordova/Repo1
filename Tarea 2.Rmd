@@ -34,8 +34,8 @@ print(x)
 
 ```{r, echo=FALSE}
 x <- py$x
-x = x + 3
-print("Se vuelven a sumar 3 unidades, esta vez usando R")
+x = x + 2
+print("Se vuelven a sumar 2 unidades, esta vez usando R")
 print(x)
 ```
 
