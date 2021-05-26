@@ -1,0 +1,41 @@
+---
+title: "Prueba 1"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r pressure, echo=FALSE}
+plot(cars)
+```
+
+```{r, echo=FALSE}
+library(reticulate)
+use_python("/usr/local/bin/python")
+```
+
+```{r, echo=FALSE}
+x <- 10
+print("Se crea la variable x=10 en R")
+print(x)
+```
+
+```{python, echo=FALSE}
+x = r.x
+def sumar10(y):
+  return y+10
+print("Se le suman 10 unidades usando una funcion definida en Python")
+x = sumar10(x)
+print(x)
+```
+
+```{r, echo=FALSE}
+x <- py$x
+x = x + 3
+print("Se vuelven a sumar 3 unidades, esta vez usando R")
+print(x)
+```
+
